@@ -1,0 +1,27 @@
+#if ($releases.size() == 0)
+Det saknas releaser för denna produkt.
+#else
+#foreach($releaseItem in $releases)
+$releaseItem.version#if ($releaseItem.dateRelease), $releaseItem.dateRelease#end
+
+
+#if ($releaseItem.actions.size() == 0)
+- Inga förändringar i denna version.
+
+#else
+#foreach($actionItem in $releaseItem.actions)
+#set($action=$actionItem.getAction())
+#if ($actionItem.getIssue())
+#set($issue=$actionItem.getIssue())
+#else
+#set($issue="")
+#end
+#if ($!issue != "")[$issue]#else-#end $action
+#set($issue="")
+## End of actions loop
+#end
+
+#end
+## End of releases loop
+#end
+#end

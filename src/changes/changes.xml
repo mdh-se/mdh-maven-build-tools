@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<document xmlns="http://maven.apache.org/changes/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/changes/1.0.0 http://maven.apache.org/xsd/changes-1.0.0.xsd">
+  <properties>
+    <title>Ändringar</title>
+  </properties>
+  <body>
+    <release version="27" date="2018-02-21">
+      <action>Uppgradera till mdh-parent:25.</action>
+      <action type="update">Ändra regeln LineLength i Checkstyle-konfigurationen, så att vi ignorerar längden på rader för @see eftersom dessa inte kan radbrytas.</action>
+    </release>
+    <release version="26" date="2016-03-04">
+      <action type="update">Ändra regeln PackageName i Checkstyle-konfigurationen, så att den inte längre tillåter stora bokstäver eller underscore.</action>
+    </release>
+    <release version="25" date="2015-09-18">
+      <action type="fix">Ändra regeln JavadocMethod i Checkstyle-konfigurationen, så att vi tillåter dokumenterade men inte deklarerade exceptions om de är en subklass av java.lang.RuntimeException.</action>
+      <action type="update">Ändra regeln LineLength i Checkstyle-konfigurationen, så att vi ignorerar längden på rader för @deprecated eftersom dessa blir mer lättlästa när de är på en rad.</action>
+      <action type="add">Lägg till fil- och mapprättigheter på innehållet i arkiven som skapas med appassembler-assembly.</action>
+      <action type="update">Uppdatera till version 1.1.3 av XSD:n för Maven Assembly Plugin.</action>
+    </release>
+    <release version="24" date="2015-08-10">
+      <action issue="SCM-40">Ändra sorteringsordning i våra POM-filer.</action>
+      <action type="add">Lägg till regeln UniqueProperties i Checkstyle-konfigurationen.</action>
+      <action type="fix">Använd inte / som värde för outputDirectory i ejb-assembly.xml.</action>
+      <action type="fix">Ändra regeln LocalFinalVariableName i Checkstyle-konfigurationen, så att en lokal final variabel inte måste börja med liten bokstav, den kan bestå av enbart stora bokstäver.</action>
+      <action type="remove">Ta bort regeln RedundantThrows från Checkstyle-konfigurationen, för att bli kompatibel med Checkstyle 6.2 och nyare.</action>
+      <action type="fix">Ändra regeln JavadocPackage i Checkstyle-konfigurationen, så att vi kräver package-info.java och inte längre tillåter package.html.</action>
+      <action type="fix">Ändra regeln TypeName i Checkstyle-konfigurationen, så att namnet på klasser som extendar ResourceBundle kan sluta på t.ex. "_en".</action>
+    </release>
+    <release version="23" date="2015-03-25">
+      <action type="add">Lägg till konfiguration i Checkstyle för SuppressionFilter.</action>
+      <action type="add">Lägg till en default suppressions-fil som alla produkter kommer att ärva, om de inte själva har en sådan fil i produkten.</action>
+    </release>
+    <release version="22" date="2014-10-22">
+      <action type="add">Lägg till stöd för @SuppressWarnings i Checkstyle.</action>
+      <action type="update">Uppdatera till version 1.1.2 av XSD:n för Maven Assembly Plugin.</action>
+    </release>
+    <release version="21" date="2014-06-02">
+      <action type="update">Ändra tillbaka encoding till ISO-8859-1 i mallarna för announcement och releaselog, eftersom maven-changes-plugin:2.10 hanterar encoding på korrekt sätt.</action>
+      <action type="update">Använd Id istället för Revision+Date som @version, då det inte varierar beroende på Locale.</action>
+    </release>
+    <release version="20" date="2014-04-29">
+      <action type="update">Ignorera längden på rader för @return eftersom dessa blir mer lättlästa när de är på en rad.</action>
+    </release>
+    <release version="19" date="2014-04-29">
+      <action type="update">Ignorera längden på rader för @param och @throws eftersom dessa blir mer lättlästa när de är på en rad.</action>
+      <action type="update">Ändra vår Checkstyle-konfiguration för regeln LineLength, där vi ignorerar längden på rader för @param och @throws eftersom dessa blir mer lättlästa när de är på en rad.</action>
+      <action type="update">Ändra vår Checkstyle-konfiguration för regeln AbstractClassName, så att klasser vars namn slutar på Factory inte behöver vara abstrakta.</action>
+    </release>
+    <release version="18" date="2014-04-07">
+      <action type="update">Ändra vår Checkstyle-konfiguration för regeln Indentation, för att dra nytta av nyheter i Checkstyle 5.7.</action>
+      <action type="update">Gör inte någon filtrering av target/appassembler i distributionen för appassembler-assembly, det ska istället konfigureras i appassembler-maven-plugin.</action>
+    </release>
+    <release version="17" date="2013-09-12">
+      <action type="update">Ändra encoding till UTF-8 i mallarna för announcement och releaselog.</action>
+    </release>
+    <release version="16" date="2013-08-07">
+      <action type="update">Ignorera MagicNumber i hasCode().</action>
+      <action type="remove">Ta bort regeln DesignForExtension.</action>
+      <action type="update">Tillåt whitespace after ARRAY_INIT.</action>
+    </release>
+    <release version="15" date="2013-03-13">
+      <action type="update">Ignorera rader som ser ut så här: " * @todo ..." när längden på en rad ska kontrolleras.</action>
+    </release>
+    <release version="14" date="2013-01-04">
+      <action type="remove">Ta bort regeln DoubleCheckedLocking från vår Checkstyle-konfiguration, för att bli kompatibel med Checkstyle 5.6 och nyare.</action>
+      <action type="update">Ignorera rader som ser ut så här: " * @version ..." när längden på en rad ska kontrolleras.</action>
+    </release>
+    <release version="13" date="2012-11-19">
+      <action type="update">Filtrera xml-filer i src/main/config i appassembler-assembly och cli-assembly.</action>
+    </release>
+    <release version="12" date="2012-11-15">
+      <action type="update">Kopiera src/main/config till roten av distributionen i ejb-assembly.</action>
+      <action type="update">Filtrera properties-filer i src/main/config i ejb-assembly.</action>
+      <action type="update">Kopiera src/main/bin till mappen bin i distributionen för appassembler-assembly.</action>
+    </release>
+    <release version="11" date="2012-09-25">
+      <action type="update">Filtera properties-filer ifrån konfigurationsmappen i appassembler-assembly.</action>
+      <action type="update">Lätta lite på reglerna för JavadocMethod i konfigurationen för Checkstyle.</action>
+    </release>
+    <release version="10" date="2012-08-09">
+      <action type="update">Lägg till kontroller av authorFormat och versionFormat för modulen JavadocType i konfigurationen för Checkstyle.</action>
+    </release>
+    <release version="9" date="2012-03-30">
+      <action type="update">Filtrera properties-filer i src/main/config med assembly descriptorn för CLI-moduler.</action>
+    </release>
+    <release version="8" date="2011-04-04">
+      <action type="update">Anpassa Checkstyle-konfigurationen till Checkstyle 5.</action>
+    </release>
+    <release version="7" date="2011-01-10">
+      <action type="add">Lägg till en assembly descriptor för appassembler-paketering.</action>
+    </release>
+    <release version="6" date="2010-11-11">
+      <action type="update">Flytta assembly descriptors till mappen assemblies, så att de fungerar med Maven Assembly Plugin 2.2.</action>
+    </release>
+    <release version="5" date="2010-11-09">
+      <action type="add">Lägg till en assembly descriptor för EJB-moduler.</action>
+    </release>
+    <release version="4" date="2010-02-12">
+      <action type="update">Förändra mallen för announcements så att den även passar som attached artifact.</action>
+    </release>
+    <release version="3" date="2009-12-11">
+      <action type="add">Lägg till en assembly descriptor för CLI-moduler.</action>
+    </release>
+    <release version="2" date="2009-10-13">
+      <action type="add">Lägg till templates för Maven Changes Plugin.</action>
+    </release>
+    <release version="1" date="2008-08-07">
+      <action type="add">Lägg till en konfiguration för Checkstyle.</action>
+    </release>
+  </body>
+</document>

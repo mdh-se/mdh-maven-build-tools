@@ -1,0 +1,25 @@
+Releaselog för ${artifactId}.
+
+Release $release.version#if ($release.dateRelease), $release.dateRelease#end
+
+
+#if ($release.actions.size() == 0)
+- Inga förändringar i denna version.
+#else
+#foreach($actionItem in $release.actions)
+#set($action=$actionItem.getAction())
+#if ($actionItem.getIssue())
+#set($issue=$actionItem.getIssue())
+#else
+#set($issue="")
+#end
+#if ($!issue != "")[$issue]#else-#end $action
+#set($issue="")
+## End of actions loop
+#end
+#end
+#if ($urlDownload)
+
+För manuell installation, ladda ner ${finalName} här:
+${urlDownload}
+#end
