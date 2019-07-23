@@ -5,6 +5,7 @@
   </properties>
   <body>
     <release version="28" date="2019-07-23">
+      <action>Uppdatera till mdh-parent:31.</action>
       <action type="update">Ändra regeln WhitespaceAround i Checkstyle-konfigurationen, så att token WILDCARD_TYPE inte längre är med.</action>
     </release>
     <release version="27" date="2018-02-21">
