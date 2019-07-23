@@ -4,6 +4,9 @@
     <title>Ändringar</title>
   </properties>
   <body>
+    <release version="28" date="2019-07-23">
+      <action type="update">Ändra regeln WhitespaceAround i Checkstyle-konfigurationen, så att token WILDCARD_TYPE inte längre är med.</action>
+    </release>
     <release version="27" date="2018-02-21">
       <action>Uppgradera till mdh-parent:25.</action>
       <action type="update">Ändra regeln LineLength i Checkstyle-konfigurationen, så att vi ignorerar längden på rader för @see eftersom dessa inte kan radbrytas.</action>
