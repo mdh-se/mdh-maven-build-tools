@@ -4,6 +4,9 @@
     <title>Ändringar</title>
   </properties>
   <body>
+    <release version="29" date="2019-MM-DD">
+      <action type="update">Ändra regeln WhitespaceAfter i Checkstyle-konfigurationen, så att bara ett fåtal tokens är med. Detta för att konfigurationen ska vara konsistent i olika versioner av Checkstyle.</action>
+    </release>
     <release version="28" date="2019-07-23">
       <action>Uppdatera till mdh-parent:31.</action>
       <action type="update">Ändra regeln WhitespaceAround i Checkstyle-konfigurationen, så att token WILDCARD_TYPE inte längre är med.</action>
