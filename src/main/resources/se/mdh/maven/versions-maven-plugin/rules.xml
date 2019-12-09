@@ -1,0 +1,195 @@
+<ruleset comparisonMethod="numeric"
+         xmlns="http://mojo.codehaus.org/versions-maven-plugin/rule/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://mojo.codehaus.org/versions-maven-plugin/rule/2.0.0 http://mojo.codehaus.org/versions-maven-plugin/xsd/rule-2.0.0.xsd">
+  <ignoreVersions>
+    <!-- We should not use pre release version -->
+    <ignoreVersion type="regex">.*-alpha.*</ignoreVersion>
+    <ignoreVersion type="regex">.*-beta.*</ignoreVersion>
+    <ignoreVersion type="regex">.*-rc.*</ignoreVersion>
+  </ignoreVersions>
+  <rules>
+    <rule groupId="commons-cli" artifactId="commons-cli">
+      <ignoreVersions>
+        <!-- We should not use timestamped version -->
+        <ignoreVersion>20040117.000000</ignoreVersion>
+        <!-- We are locked to 1.2 (because 1.3 deprecates the parser we use) -->
+        <ignoreVersion>1.3</ignoreVersion>
+        <ignoreVersion type="regex">1\.[3-9]\.[0-9]</ignoreVersion>
+      </ignoreVersions>
+    </rule>
+    <rule groupId="commons-lang" artifactId="commons-lang">
+      <ignoreVersions>
+        <!-- We are locked to 2.6 -->
+        <ignoreVersion type="regex">2\.[7-9]</ignoreVersion>
+      </ignoreVersions>
+    </rule>
+    <rule groupId="dumbster" artifactId="dumbster">
+      <ignoreVersions>
+        <!-- We are locked to 1.1 -->
+        <ignoreVersion type="regex">1\.[2-9]</ignoreVersion>
+      </ignoreVersions>
+    </rule>
+    <rule groupId="javax.mail" artifactId="mail">
+      <ignoreVersions>
+        <!-- We are locked to 1.4.x -->
+        <ignoreVersion type="regex">1\.5\..*</ignoreVersion>
+      </ignoreVersions>
+    </rule>
+    <rule groupId="javax.servlet" artifactId="jsp-api">
+      <ignoreVersions>
+        <!-- We should not use pre release version -->
+        <ignoreVersion>2.0.public_draft</ignoreVersion>
+      </ignoreVersions>
+    </rule>
+    <rule groupId="javax.servlet" artifactId="jstl">
+      <ignoreVersions>
+        <!-- We are locked to 1.1.2 -->
+        <ignoreVersion>1.2</ignoreVersion>
+      </ignoreVersions>
+    </rule>
+    <rule groupId="javax.servlet" artifactId="servlet-api">
+      <ignoreVersions>
+        <!-- We should not use pre release version -->
+        <ignoreVersion>2.4.public_draft</ignoreVersion>
+        <!-- We should not use timestamped version -->
+        <ignoreVersion>2.4-20040521</ignoreVersion>
+        <!-- We are locked to 2.5 -->
+        <ignoreVersion type="regex">3\.0-.*</ignoreVersion>
+      </ignoreVersions>
+    </rule>
+    <rule groupId="javax.servlet.jsp" artifactId="jsp-api">
+      <ignoreVersions>
+        <!-- We are locked to 2.1(.0) -->
+        <ignoreVersion type="regex">2\.1-.*</ignoreVersion>
+        <ignoreVersion type="regex">2\.1\.[1-9]</ignoreVersion>
+        <ignoreVersion type="regex">2\.1\.[1-9]-.*</ignoreVersion>
+        <ignoreVersion>2.2</ignoreVersion>
+        <ignoreVersion type="regex">2\.2\.[1-9]-.*</ignoreVersion>
+      </ignoreVersions>
+    </rule>
+    <rule groupId="javax.ws.rs" artifactId="javax.ws.rs-api">
+      <ignoreVersions>
+        <!-- We are locked to 2.0.x -->
+        <ignoreVersion type="regex">2\.1.*</ignoreVersion>
+      </ignoreVersions>
+    </rule>
+    <rule groupId="javax.xml.bind" artifactId="jaxb-api">
+      <ignoreVersions>
+        <!-- We should not use time-stamped versions -->
+        <ignoreVersion type="regex">2\.2\.12-b[0-9.]+</ignoreVersion>
+        <!-- Version 2.2.4 is the last version that runs on Java 5 -->
+        <ignoreVersion type="regex">2\.2\.[5-9]</ignoreVersion>
+        <ignoreVersion type="regex">2\.2\.1[0-9]</ignoreVersion>
+      </ignoreVersions>
+    </rule>
+    <rule groupId="javax.xml.ws" artifactId="jaxws-api">
+      <ignoreVersions>
+        <!-- We should not use pre release version -->
+        <ignoreVersion type="regex">2\.2\.5-promoted-b0[1-4]</ignoreVersion>
+        <!-- Version 2.2.5 is the last version that runs on Java 5 -->
+        <ignoreVersion type="regex">2\.2\.[6-9]</ignoreVersion>
+        <ignoreVersion type="regex">2\.2\.1[0-9]</ignoreVersion>
+      </ignoreVersions>
+    </rule>
+    <rule groupId="jboss" artifactId="jboss-j2ee">
+      <ignoreVersions>
+        <!-- Wrong syntax for this version number -->
+        <ignoreVersion>4.0.3sp1</ignoreVersion>
+        <!-- We are locked to 4.0.3.sp1 -->
+        <ignoreVersion type="regex">3\..*</ignoreVersion>
+        <ignoreVersion type="regex">4\.0\.[0-2]</ignoreVersion>
+        <ignoreVersion type="regex">4\.2\..*</ignoreVersion>
+      </ignoreVersions>
+    </rule>
+    <rule groupId="jboss" artifactId="jbossall-client">
+      <ignoreVersions>
+        <!-- Wrong syntax for this version number -->
+        <ignoreVersion>4.0.3sp1</ignoreVersion>
+        <!-- We are locked to 4.0.3.sp1 -->
+        <ignoreVersion type="regex">3\..*</ignoreVersion>
+        <ignoreVersion type="regex">4\.2\..*</ignoreVersion>
+      </ignoreVersions>
+    </rule>
+    <rule groupId="jboss" artifactId="jbossall-client-mdh">
+      <ignoreVersions>
+        <!-- Wrong syntax for this version number -->
+        <ignoreVersion>4.0.3sp1</ignoreVersion>
+      </ignoreVersions>
+    </rule>
+    <rule groupId="log4j" artifactId="log4j">
+      <ignoreVersions>
+        <!-- Broken versions -->
+        <ignoreVersion type="regex">1\.2\.1[5-6]</ignoreVersion>
+      </ignoreVersions>
+    </rule>
+    <rule groupId="mysql" artifactId="mysql-connector-java">
+      <ignoreVersions>
+        <!-- We are locked to 5.1.10 -->
+        <ignoreVersion type="regex">5\.1\.1[1-9]</ignoreVersion>
+        <ignoreVersion type="regex">5\.1\.2[0-9]</ignoreVersion>
+        <ignoreVersion type="regex">5\.1\.3[0-9]</ignoreVersion>
+        <ignoreVersion type="regex">5\.1\.4[0-9]</ignoreVersion>
+        <ignoreVersion type="regex">6\.0\.[0-9]</ignoreVersion>
+        <ignoreVersion type="regex">8\.0\.[0-9]</ignoreVersion>
+      </ignoreVersions>
+    </rule>
+    <rule groupId="net.sourceforge.jtds" artifactId="jtds">
+      <ignoreVersions>
+        <!-- We are locked to 1.2.2 -->
+        <ignoreVersion type="regex">1\.2\.[3-9]</ignoreVersion>
+        <ignoreVersion type="regex">1\.3\.[0-9]</ignoreVersion>
+      </ignoreVersions>
+    </rule>
+    <rule groupId="org.apache.commons" artifactId="commons-email">
+      <ignoreVersions>
+        <!-- We are locked to 1.3.x -->
+        <ignoreVersion>1.4</ignoreVersion>
+        <ignoreVersion type="regex">1\.4\..*</ignoreVersion>
+      </ignoreVersions>
+    </rule>
+    <rule groupId="org.apache.cxf" artifactId="*">
+      <ignoreVersions>
+        <!-- We are locked to 3.1.x -->
+        <ignoreVersion type="regex">3\.2\..*</ignoreVersion>
+      </ignoreVersions>
+    </rule>
+    <rule groupId="org.apache.directory.server" artifactId="*">
+      <ignoreVersions>
+        <!-- We are locked to 1.0.x -->
+        <ignoreVersion type="regex">1\.5\..*</ignoreVersion>
+        <!-- We should not use milestone versions -->
+        <ignoreVersion type="regex">.*-M[1-9]</ignoreVersion>
+        <ignoreVersion type="regex">.*-M1[0-9]</ignoreVersion>
+        <ignoreVersion type="regex">.*-M2[0-9]</ignoreVersion>
+      </ignoreVersions>
+    </rule>
+    <rule groupId="org.apache.derby" artifactId="derby">
+      <ignoreVersions>
+        <!-- We are locked to 10.5.3.0_1 -->
+        <ignoreVersion type="regex">10\.6\..*</ignoreVersion>
+        <ignoreVersion type="regex">10\.7\..*</ignoreVersion>
+        <ignoreVersion type="regex">10\.8\..*</ignoreVersion>
+        <ignoreVersion type="regex">10\.9\..*</ignoreVersion>
+        <ignoreVersion type="regex">10\.10\..*</ignoreVersion>
+        <ignoreVersion type="regex">10\.11\..*</ignoreVersion>
+        <ignoreVersion type="regex">10\.12\..*</ignoreVersion>
+        <ignoreVersion type="regex">10\.13\..*</ignoreVersion>
+        <ignoreVersion type="regex">10\.14\..*</ignoreVersion>
+      </ignoreVersions>
+    </rule>
+    <rule groupId="org.apache.maven.wagon" artifactId="wagon-ssh">
+      <ignoreVersions>
+        <!-- Broken versions -->
+        <ignoreVersion>2.11</ignoreVersion>
+        <ignoreVersion>2.12</ignoreVersion>
+        <ignoreVersion>3.0.0</ignoreVersion>
+      </ignoreVersions>
+    </rule>
+    <rule groupId="se.mdh.konto" artifactId="mdh-konto-impl">
+      <ignoreVersions>
+        <!-- Failed release -->
+        <ignoreVersion>4.3.0</ignoreVersion>
+      </ignoreVersions>
+    </rule>
+  </rules>
+</ruleset>

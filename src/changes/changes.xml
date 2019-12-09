@@ -4,8 +4,9 @@
     <title>Ändringar</title>
   </properties>
   <body>
-    <release version="29" date="2019-MM-DD">
+    <release version="29" date="2019-12-09">
       <action type="update">Ändra regeln WhitespaceAfter i Checkstyle-konfigurationen, så att bara ett fåtal tokens är med. Detta för att konfigurationen ska vara konsistent i olika versioner av Checkstyle.</action>
+      <action>Lägg till en regel-fil för versions-maven-plugin, som tidigare har legat i utvecklarhandboken.</action>
     </release>
     <release version="28" date="2019-07-23">
       <action>Uppdatera till mdh-parent:31.</action>
