@@ -12,9 +12,6 @@
       <ignoreVersions>
         <!-- We should not use timestamped version -->
         <ignoreVersion>20040117.000000</ignoreVersion>
-        <!-- We are locked to 1.2 (because 1.3 deprecates the parser we use) -->
-        <ignoreVersion>1.3</ignoreVersion>
-        <ignoreVersion type="regex">1\.[3-9]\.[0-9]</ignoreVersion>
       </ignoreVersions>
     </rule>
     <rule groupId="commons-lang" artifactId="commons-lang">
@@ -77,18 +74,26 @@
       <ignoreVersions>
         <!-- We should not use time-stamped versions -->
         <ignoreVersion type="regex">2\.2\.12-b[0-9.]+</ignoreVersion>
-        <!-- Version 2.2.4 is the last version that runs on Java 5 -->
-        <ignoreVersion type="regex">2\.2\.[5-9]</ignoreVersion>
+        <ignoreVersion type="regex">2\.3\.0-b[0-9.]+</ignoreVersion>
+        <ignoreVersion type="regex">2\.4\.0-b[0-9.]+</ignoreVersion>
+        <!-- We should not use pre release version -->
+        <ignoreVersion type="regex">2\.2\.1-promoted-b[0-9]</ignoreVersion>
+        <ignoreVersion type="regex">2\.2\.2-promoted-b[0-9]</ignoreVersion>
+        <!-- Version 2.2.8 is the version that ships with Java 8 -->
+        <ignoreVersion type="regex">2\.2\.9</ignoreVersion>
         <ignoreVersion type="regex">2\.2\.1[0-9]</ignoreVersion>
+        <ignoreVersion type="regex">2\.3\.[0-9]</ignoreVersion>
       </ignoreVersions>
     </rule>
     <rule groupId="javax.xml.ws" artifactId="jaxws-api">
       <ignoreVersions>
         <!-- We should not use pre release version -->
+        <ignoreVersion type="regex">2\.2\.2-promoted-b0[2-5]</ignoreVersion>
+        <ignoreVersion type="regex">2\.2\.3-promoted-b0[1-7]</ignoreVersion>
         <ignoreVersion type="regex">2\.2\.5-promoted-b0[1-4]</ignoreVersion>
-        <!-- Version 2.2.5 is the last version that runs on Java 5 -->
-        <ignoreVersion type="regex">2\.2\.[6-9]</ignoreVersion>
+        <!-- Version 2.2.9 is the version that ships with Java 8 -->
         <ignoreVersion type="regex">2\.2\.1[0-9]</ignoreVersion>
+        <ignoreVersion type="regex">2\.3\.[0-9]</ignoreVersion>
       </ignoreVersions>
     </rule>
     <rule groupId="jboss" artifactId="jboss-j2ee">
@@ -142,7 +147,7 @@
     </rule>
     <rule groupId="org.apache.commons" artifactId="commons-email">
       <ignoreVersions>
-        <!-- We are locked to 1.3.x -->
+        <!-- We are locked to 1.3.x because 1.4+ uses javax.mail:mail:1.5.x-->
         <ignoreVersion>1.4</ignoreVersion>
         <ignoreVersion type="regex">1\.4\..*</ignoreVersion>
       </ignoreVersions>
@@ -151,6 +156,7 @@
       <ignoreVersions>
         <!-- We are locked to 3.1.x -->
         <ignoreVersion type="regex">3\.2\..*</ignoreVersion>
+        <ignoreVersion type="regex">3\.3\..*</ignoreVersion>
       </ignoreVersions>
     </rule>
     <rule groupId="org.apache.directory.server" artifactId="*">
