@@ -4,6 +4,10 @@
     <title>Ändringar</title>
   </properties>
   <body>
+    <release version="30" date="2021-04-26">
+      <action type="update">Flytta regeln LineLength i Checkstyle-konfigurationen från TreeWalker till Checker, för att bli kompatibel med Checkstyle 8.29.</action>
+      <action type="update">Flytta delar av regeln JavadocMethod i Checkstyle-konfigurationen till en ny regel MissingJavadocMethod, för att bli kompatibel med Checkstyle 8.29.</action>
+    </release>
     <release version="29" date="2019-12-09">
       <action type="update">Ändra regeln WhitespaceAfter i Checkstyle-konfigurationen, så att bara ett fåtal tokens är med. Detta för att konfigurationen ska vara konsistent i olika versioner av Checkstyle.</action>
       <action>Lägg till en regel-fil för versions-maven-plugin, som tidigare har legat i utvecklarhandboken.</action>

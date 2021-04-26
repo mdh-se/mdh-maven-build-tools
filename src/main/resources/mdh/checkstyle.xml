@@ -58,6 +58,13 @@
         <property name="eachLine" value="true"/>
     </module>
 
+    <module name="LineLength">
+        <property name="fileExtensions" value="java" />
+        <!-- Ignore lines that looks like this: " * @version ..." -->
+        <property name="ignorePattern" value="^ *\* *@(param|return|throws|todo|version|deprecated|see) *.*$"/>
+        <property name="severity" value="warning"/>
+    </module>
+
     <!-- Checks for Headers                                -->
     <!-- See http://checkstyle.sf.net/config_header.html   -->
     <!-- <module name="Header">                            -->
@@ -98,8 +105,10 @@
         <!-- See http://checkstyle.sf.net/config_javadoc.html -->
         <module name="JavadocMethod">
             <property name="scope" value="protected"/>
+        </module>
+        <module name="MissingJavadocMethod">
+            <property name="scope" value="protected"/>
             <property name="allowMissingPropertyJavadoc" value="true"/>
-            <property name="allowUndeclaredRTE" value="true"/>
         </module>
         <module name="JavadocType">
             <property name="authorFormat" value="\S"/>
@@ -156,11 +165,6 @@
 
         <!-- Checks for Size Violations.                    -->
         <!-- See http://checkstyle.sf.net/config_sizes.html -->
-        <module name="LineLength">
-            <!-- Ignore lines that looks like this: " * @version ..." -->
-            <property name="ignorePattern" value="^ *\* *@(param|return|throws|todo|version|deprecated|see) *.*$"/>
-            <property name="severity" value="warning"/>
-        </module>
         <module name="MethodLength">
             <property name="severity" value="warning"/>
         </module>
