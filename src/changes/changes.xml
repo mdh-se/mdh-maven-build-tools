@@ -4,6 +4,9 @@
     <title>Ändringar</title>
   </properties>
   <body>
+    <release version="31" date="2021-04-26">
+      <action type="remove">Ta bort propertyn versionFormat från regeln JavadocType från Checkstyle-konfigurationen, eftersom vi inte kräver @version i git.</action>
+    </release>
     <release version="30" date="2021-04-26">
       <action type="update">Flytta regeln LineLength i Checkstyle-konfigurationen från TreeWalker till Checker, för att bli kompatibel med Checkstyle 8.29.</action>
       <action type="update">Flytta delar av regeln JavadocMethod i Checkstyle-konfigurationen till en ny regel MissingJavadocMethod, för att bli kompatibel med Checkstyle 8.29.</action>
