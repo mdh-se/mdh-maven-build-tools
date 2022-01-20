@@ -1,1 +1,1 @@
-buildJava()
+buildJava(mavenGoals: 'clean deploy')
