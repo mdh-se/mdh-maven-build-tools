@@ -7,6 +7,7 @@
     <release version="32" date="2022-MM-DD">
       <action>Uppdatera till mdh-parent:48.</action>
       <action>Konvertera källkoden till UTF-8 encoding.</action>
+      <action>Lägg till en Jenkinsfile.</action>
     </release>
     <release version="31" date="2021-04-26">
       <action type="remove">Ta bort propertyn versionFormat från regeln JavadocType från Checkstyle-konfigurationen, eftersom vi inte kräver @version i git.</action>
