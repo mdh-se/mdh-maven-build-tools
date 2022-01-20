@@ -1,12 +1,12 @@
 #if ($releases.size() == 0)
-Det saknas releaser för denna produkt.
+Det saknas releaser fÃ¶r denna produkt.
 #else
 #foreach($releaseItem in $releases)
 $releaseItem.version#if ($releaseItem.dateRelease), $releaseItem.dateRelease#end
 
 
 #if ($releaseItem.actions.size() == 0)
-- Inga förändringar i denna version.
+- Inga fÃ¶rÃ¤ndringar i denna version.
 
 #else
 #foreach($actionItem in $releaseItem.actions)

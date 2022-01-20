@@ -1,10 +1,10 @@
-Releaselog för ${artifactId}.
+Releaselog fÃ¶r ${artifactId}.
 
 Release $release.version#if ($release.dateRelease), $release.dateRelease#end
 
 
 #if ($release.actions.size() == 0)
-- Inga förändringar i denna version.
+- Inga fÃ¶rÃ¤ndringar i denna version.
 #else
 #foreach($actionItem in $release.actions)
 #set($action=$actionItem.getAction())
@@ -20,6 +20,6 @@ Release $release.version#if ($release.dateRelease), $release.dateRelease#end
 #end
 #if ($urlDownload)
 
-För manuell installation, ladda ner ${finalName} här:
+FÃ¶r manuell installation, ladda ner ${finalName} hÃ¤r:
 ${urlDownload}
 #end

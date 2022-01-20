@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE module PUBLIC
     "-//Puppy Crawl//DTD Check Configuration 1.2//EN"
     "http://www.puppycrawl.com/dtds/configuration_1_2.dtd">
@@ -126,28 +126,28 @@
             <property name="severity" value="warning"/>
         </module>
         <module name="ConstantName">
-            <property name="format" value="^log|[A-ZÅÄÖ][A-Z0-9ÅÄÖ]*(_[A-Z0-9ÅÄÖ]+)*$"/>
+            <property name="format" value="^log|[A-ZÃ…Ã„Ã–][A-Z0-9Ã…Ã„Ã–]*(_[A-Z0-9Ã…Ã„Ã–]+)*$"/>
         </module>
         <module name="LocalFinalVariableName">
-            <property name="format" value="^[a-zA-Z0-9åäöÅÄÖ_]*$"/>
+            <property name="format" value="^[a-zA-Z0-9Ã¥Ã¤Ã¶Ã…Ã„Ã–_]*$"/>
         </module>
         <module name="LocalVariableName">
-            <property name="format" value="^[a-zåäö][a-zA-Z0-9åäöÅÄÖ_]*$"/>
+            <property name="format" value="^[a-zÃ¥Ã¤Ã¶][a-zA-Z0-9Ã¥Ã¤Ã¶Ã…Ã„Ã–_]*$"/>
         </module>
         <module name="MemberName">
-            <property name="format" value="^[a-zåäö][a-zA-Z0-9åäöÅÄÖ_]*$"/>
+            <property name="format" value="^[a-zÃ¥Ã¤Ã¶][a-zA-Z0-9Ã¥Ã¤Ã¶Ã…Ã„Ã–_]*$"/>
         </module>
         <module name="MethodName">
-            <property name="format" value="^[a-zåäö][a-zA-Z0-9åäöÅÄÖ_]*$"/>
+            <property name="format" value="^[a-zÃ¥Ã¤Ã¶][a-zA-Z0-9Ã¥Ã¤Ã¶Ã…Ã„Ã–_]*$"/>
         </module>
         <module name="PackageName">
             <property name="format" value="^[a-z]+(\.[a-z][a-z0-9]*)*$"/>
         </module>
         <module name="ParameterName">
-            <property name="format" value="^[a-zåäö][a-zA-Z0-9åäöÅÄÖ_]*$"/>
+            <property name="format" value="^[a-zÃ¥Ã¤Ã¶][a-zA-Z0-9Ã¥Ã¤Ã¶Ã…Ã„Ã–_]*$"/>
         </module>
         <module name="StaticVariableName">
-            <property name="format" value="^[a-zåäö][a-zA-Z0-9åäöÅÄÖ_]*$"/>
+            <property name="format" value="^[a-zÃ¥Ã¤Ã¶][a-zA-Z0-9Ã¥Ã¤Ã¶Ã…Ã„Ã–_]*$"/>
         </module>
         <module name="TypeName">
           <property name="format" value="^[A-Z][a-zA-Z0-9]*(_[a-z][a-z])?$"/>
