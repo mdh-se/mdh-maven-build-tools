@@ -1,4 +1,4 @@
-Releaselog för ${artifactId}.
+Releaselog för $artifactId.
 
 Release $release.version#if ($release.dateRelease), $release.dateRelease#end
 

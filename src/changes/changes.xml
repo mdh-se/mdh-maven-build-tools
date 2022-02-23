@@ -4,6 +4,9 @@
     <title>Ändringar</title>
   </properties>
   <body>
+    <release version="33" date="2022-02-23">
+      <action>Se till att artifactId inte resolvas när mdh-maven-build-tools byggs.</action>
+    </release>
     <release version="32" date="2022-01-20">
       <action>Uppdatera till mdh-parent:48.</action>
       <action>Konvertera källkoden till UTF-8 encoding.</action>
