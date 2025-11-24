@@ -63,6 +63,7 @@
         <!-- Ignore lines that looks like this: " * @version ..." -->
         <property name="ignorePattern" value="^ *\* *@(param|return|throws|todo|version|deprecated|see) *.*$"/>
         <property name="severity" value="warning"/>
+        <property name="max" value="127"/>
     </module>
 
     <!-- Checks for Headers                                -->
